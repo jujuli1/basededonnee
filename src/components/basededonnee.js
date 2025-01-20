@@ -6,7 +6,7 @@ const UsersList = () => {
 
   // Utilisation de useEffect pour effectuer une requête à l'API au chargement du composant
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("http://localhost:5000/users")
       .then((response) => response.json()) // Conversion des données en JSON
       .then((data) => setUsers(data)) // Mise à jour de l'état avec les données reçues
       .catch((error) => console.error("Erreur lors de la récupération des utilisateurs:", error)); // Gestion des erreurs
